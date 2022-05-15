@@ -1,0 +1,321 @@
+:root {
+  --clr-yellowBase: #ffd2da;
+  --clr-yellowLight: #ffecef;
+  --clr-yellowDark: #e5acb6;
+
+  --clr-blueBase: #99a5db;
+  --clr-blueLight:#aab8f4;
+  --clr-blueDark: #8893c3;
+
+  --clr-redBase: #f7867e;
+  --clr-redLight: #f9a49e;
+  --clr-redDark: #dd5d54;
+
+  --clr-greenBase: #9dc98a;
+  --clr-greenLight: #b3d5a4;
+  --clr-greenDark: #84b070;
+
+  --clr-blackBase: #323232;
+  --clr-blackLight: #4c4c4c;
+  --clr-blackDark: #191919;
+}
+
+html {
+  height: 90%;
+}
+
+body {
+  margin: 0;
+}
+
+.principal {
+  animation: fadeInAnimation ease 1.5s;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.accueil {
+  scrollbar-width: thin;
+  scrollbar-color: var(--clr-blueBase) var(--clr-blueLight);
+
+  animation: slideInAnimation ease 1.5s;
+}
+
+.join {
+  scrollbar-width: thin;
+  scrollbar-color: var(--clr-redBase) var(--clr-redLight);
+
+  animation: slideInAnimation ease 1.5s;
+}
+
+.donate {
+  scrollbar-width: thin;
+  scrollbar-color: var(--clr-greenBase) var(--clr-greenLight);
+
+  animation: slideInAnimation ease 1.5s;
+}
+
+.about {
+  scrollbar-width: thin;
+  scrollbar-color: var(--clr-blackBase) var(--clr-blackLight);
+
+  animation: slideInAnimation ease 1.5s;
+}
+
+@keyframes slideInAnimation {
+  0% {
+    transform: translate(0, -10em);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+a {
+  box-sizing: content-box;
+  margin-left: 3em;
+  margin-top: -0.2em;
+}
+
+.logo {
+  height: 5em;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+
+  height: 4.5em;
+  padding: 0.4em;
+}
+
+.containerNavBar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.boutonNavBar {
+  color: white;
+  font-family: Broadway;
+  font-size: 1.4em;
+
+  padding: 10px;
+  margin-right: 0.7em;
+  border-radius: 20px;
+  border: none;
+
+  transition: all 1s ease;
+}
+
+.bodyPage {
+  height: 100%;
+}
+
+h1 {
+  font-family: Broadway;
+  color: white;
+  font-size: 3em;
+  text-align: center;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+}
+
+.container {
+  display: grid;
+
+  justify-content: space-evenly;
+  align-items: center;
+
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+  padding: 2em;
+  border-radius: 30px;
+}
+
+p {
+  font-family: "Courier";
+  color: white;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+  padding: 0.3em;
+}
+
+.miniLogo {
+  width: 2em;
+  margin-left: 0.4em;
+  margin-right: 0.4em;
+}
+
+/*--------------------- Page de choix ---------------------*/
+.pageChoix {
+  height: 100%;
+  background-color: var(--clr-yellowLight);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.boutonPrincipal {
+  background-color: var(--clr-yellowBase);
+  color: white;
+  font-family: Broadway;
+  font-size: 4em;
+
+  padding: 50px;
+  border-radius: 30px;
+
+  transition: all 1.5s ease;
+}
+
+.boutonPrincipal:hover {
+  box-shadow: inset 10em -10em var(--clr-yellowDark);
+}
+
+.boutonPrincipal:focus {
+  animation: effect 0.5s ease-out;
+}
+
+@keyframes effect {
+  50% {
+    transform: scale(1.2, 1.2);
+    opacity: 0;
+  }
+  99% {
+    transform: scale(0.001, 0.001);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0.001, 0.001);
+    opacity: 1;
+  }
+}
+
+/*--------------------- Page d'accueil ---------------------*/
+.accueilHeader {
+  background-color: var(--clr-blueBase);
+}
+
+.accueilBoutonNavBar {
+  background-color: var(--clr-blueLight);
+}
+
+.accueilBoutonNavBar:hover {
+  box-shadow: inset 0 -5em var(--clr-blueDark);
+}
+
+.accueilPageAccueil {
+  background-color: var(--clr-blueLight);
+}
+
+.accueilContainer {
+  grid-template-columns: repeat(2, 1fr);
+
+  background-color: var(--clr-blueBase);
+}
+
+.container > * {
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+}
+
+.accueilFooter {
+  background-color: var(--clr-blueBase);
+}
+
+/*--------------------- Page de join ---------------------*/
+.joinHeader {
+  background-color: var(--clr-redBase);
+}
+
+.joinBoutonNavBar {
+  background-color: var(--clr-redLight);
+}
+
+.joinBoutonNavBar:hover {
+  box-shadow: inset 0 -5em var(--clr-redDark);
+}
+
+.joinPage {
+  background-color: var(--clr-redLight);
+}
+
+.joinContainer {
+  grid-template-columns: repeat(2, 1fr);
+
+  background-color: var(--clr-redBase);
+}
+
+.joinFooterPage {
+  background-color: var(--clr-redBase);
+}
+
+/*--------------------- Page de donate ---------------------*/
+.donateHeader {
+  background-color: var(--clr-greenBase);
+}
+
+.donateBoutonNavBar {
+  background-color: var(--clr-greenLight);
+}
+
+.donateBoutonNavBar:hover {
+  box-shadow: inset 0 -5em var(--clr-greenDark);
+}
+
+.donatePage {
+  background-color: var(--clr-greenLight);
+}
+
+.donateContainer {
+  grid-template-columns: repeat(2, 1fr);
+
+  background-color: var(--clr-greenBase);
+}
+
+.donateFooterPage {
+  background-color: var(--clr-greenBase);
+}
+
+/*--------------------- Page de about ---------------------*/
+.aboutHeader {
+  background-color: var(--clr-blackBase);
+}
+
+.aboutBoutonNavBar {
+  background-color: var(--clr-blackLight);
+}
+
+.aboutBoutonNavBar:hover {
+  box-shadow: inset 0 -5em var(--clr-blackDark);
+}
+
+.aboutPage {
+  background-color: var(--clr-blackLight);
+}
+
+.aboutContainer {
+  grid-template-columns: repeat(2, 1fr);
+
+  background-color: var(--clr-blackBase);
+}
+
+.aboutFooterPage {
+  background-color: var(--clr-blackBase);
+}
