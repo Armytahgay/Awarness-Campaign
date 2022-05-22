@@ -1,9 +1,9 @@
 <!doctype html>
-<html class="principal" lang="">
+<html class="home" lang="">
 
 <head>
   <meta charset="utf-8">
-  <title>oui</title>
+  <title>Home page</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -11,14 +11,50 @@
   <link rel="stylesheet" href="main.css">
 </head>
 
-<body class="pageChoix">
-  <button class="boutonPrincipal" onclick="location.href='pages/donate.html'">
-    Donate
-  </button>
-  <button class="boutonPrincipal" onclick="location.href='pages/join.html'">
-    Join us
-  </button>
+<body class="bodyPage">
+    <header class="headHomePage">
+        <h1>Help Homeless People</h1>
+        <div class="headContainer container">
+            <h2 class="headText container blueBG">More</h2>
+        <a href="#p1" class="flecheButton container blueBG">
+            <img src="img/fleche.png" class="flecheImg">
+        </a>
+        </div>
+    </header>
+
+    <span id="p1" class="homeContainer container blueBG">
+      <p>Homelessness explaination</p>
+    </span>
+
+    <span class="homeContainer container blueBG">
+      <p>Who are we? The association description, what we did/do (numbers), future project.</p>
+    </span>
+
+    <span class="optionContainer">
+        <button class="optionButton button blueBG" onclick="location.href='join.html'">
+            <h2>Join</h2>
+        </button>
+
+        <button class="optionButton button blueBG" onclick="location.href='donate.html'">
+          <h2>Donate</h2>
+        </button>
+    </span>
+
+    <span class="optionContainer">
+        <span class="biContainer container blueBG">
+          <p>We can do a lot with only 1$</p>
+        </span>
+
+        <span class="biContainer container blueBG">
+          <p>We can do a lot with only 1$</p>
+        </span>
+    </span>
 
 </body>
+
+<footer class="homeFooter blueBG">
+    <img src="img/instalogo.png" class="miniLogo">
+    <p>Find us on social media</p>
+</footer>
 
 </html>
