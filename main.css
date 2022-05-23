@@ -4,19 +4,19 @@
   --clr-yellowDark: #e5acb6;
 
   --clr-blueBase: #99a5db;
-  --clr-blueLight:#aab8f4;
+  --clr-blueLight: rgba(153, 165, 219, 0.35);
   --clr-blueDark: #8893c3;
 
   --clr-redBase: #f7867e;
-  --clr-redLight: #f9a49e;
+  --clr-redLight: rgba(249, 164, 158, 0.35);
   --clr-redDark: #dd5d54;
 
   --clr-greenBase: #9dc98a;
-  --clr-greenLight: #b3d5a4;
+  --clr-greenLight: rgba(179, 213, 164, 0.35);
   --clr-greenDark: #84b070;
 
   --clr-blackBase: #323232;
-  --clr-blackLight: #4c4c4c;
+  --clr-blackLight: rgba(76, 76, 76, 0.35);
   --clr-blackDark: #191919;
 }
 
@@ -131,11 +131,12 @@ h2 {
   font-family: Rockwell Extra Bold;
   color: white;
   margin: 0;
+  text-align: center;
 }
 
 .container {
   display: flex;
-  padding: 0.5em;
+  padding: 1.5em;
   border-radius: 30px;
 }
 
@@ -157,9 +158,9 @@ a {
 
 p {
   font-family: "Courier";
+  text-justify: inter-word;
   color: white;
   font-size: 1.5em;
-  margin: 0;
 }
 
 footer {
@@ -203,7 +204,6 @@ footer {
   align-items: center;
   justify-content: space-between;
   width: 10%;
-  padding: 1em;
 }
 
 .headText {
@@ -212,6 +212,7 @@ footer {
   font-weight: bold;
 
   margin-bottom: 0.5em;
+  padding: 0.7em;
 }
 
 .flecheButton {
@@ -227,9 +228,14 @@ footer {
   width: 70%;
 }
 
+.chart {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .homeContainer {
+  display: block;
   margin: 1em;
-  padding: 1.5em;
 }
 
 .optionContainer {
@@ -269,7 +275,16 @@ footer {
 .biContainer {
   width: 30%;
   margin: 1em;
-  padding: 1.5em;
+  padding: 0 1.5em 0 1.5em;
+}
+
+.biContainer > p {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+footer > p {
+  margin: 0;
 }
 
 /*--------------------- Page de join ---------------------*/
