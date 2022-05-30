@@ -43,28 +43,24 @@ body {
 }
 
 .home {
-  scrollbar-width: thin;
   scrollbar-color: var(--clr-blueBase) var(--clr-blueLight);
 
   animation: slideInAnimation ease 1.5s;
 }
 
 .join {
-  scrollbar-width: thin;
   scrollbar-color: var(--clr-redBase) var(--clr-redLight);
 
   animation: slideInAnimation ease 1.5s;
 }
 
 .donate {
-  scrollbar-width: thin;
   scrollbar-color: var(--clr-greenBase) var(--clr-greenLight);
 
   animation: slideInAnimation ease 1.5s;
 }
 
 .about {
-  scrollbar-width: thin;
   scrollbar-color: var(--clr-blackBase) var(--clr-blackLight);
 
   animation: slideInAnimation ease 1.5s;
@@ -88,7 +84,6 @@ a {
 
 .logo {
   height: 5em;
-  margin-top: 6%;
 }
 
 header {
@@ -155,12 +150,22 @@ h3 {
   font-family: Rockwell Extra Bold;
   color: white;
   margin: 0;
+  font-size: 1.5em;
   text-align: center;
+}
+
+.name {
+  margin: auto;
+  color: black;
+  -webkit-text-stroke: 1px white;
+  font-size: 1.7em;
 }
 
 .container {
   display: flex;
+  flex-direction: column;
   padding: 1.5em;
+  margin: 1em 5em 1em 5em;
   border-radius: 30px;
 }
 
@@ -172,12 +177,24 @@ h3 {
   width: 10em;
   height: 5em;
   border-radius: 30px;
-
-  transition: all 1.5s ease;
 }
 
 a {
+  display: flex;
+  justify-content: center;
+  width: 100%;
   margin: 0;
+  text-decoration: none;
+}
+
+a::after {
+  margin: 0;
+  text-decoration: none;
+  color: white;
+}
+
+hr {
+  width: 85%;
 }
 
 p {
@@ -185,6 +202,7 @@ p {
   text-justify: inter-word;
   color: white;
   font-size: 1.5em;
+  margin: 0.5em;
 }
 
 img {
@@ -192,16 +210,12 @@ img {
   margin: auto;
 }
 
-.form {
+#form {
   display: none;
 }
 
 footer {
   display: flex;
-  justify-content: center;
-  justify-self: center;
-  align-items: center;
-  padding: 0.3em;
 }
 
 .miniLogo {
@@ -265,6 +279,17 @@ footer {
   width: 65px;
   border-radius: 50%;
   padding: 10px;
+
+  animation: changeCouleur ease 1.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes changeCouleur {
+  0% {background-color: var(--clr-blueLight);}
+  25% {background-color: var(--clr-blueDark);}
+  50% {background-color: var(--clr-blueBase);}
+  75% {background-color: var(--clr-blueDark);}
+  100% {background-color: var(--clr-blueLight);}
 }
 
 .flecheImg {
@@ -276,11 +301,6 @@ footer {
 .chart {
   display: flex;
   justify-content: space-evenly;
-}
-
-.homeContainer {
-  display: block;
-  margin: 1em;
 }
 
 .optionContainer {
@@ -296,25 +316,6 @@ footer {
 
 .optionButton:hover {
   box-shadow: inset 10em -10em var(--clr-blueDark);
-}
-
-.optionButton:focus {
-  animation: effect 0.5s ease-out;
-}
-
-@keyframes effect {
-  50% {
-    transform: scale(1.2, 1.2);
-    opacity: 0;
-  }
-  99% {
-    transform: scale(0.001, 0.001);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(0.001, 0.001);
-    opacity: 1;
-  }
 }
 
 .biContainer {
@@ -353,7 +354,6 @@ footer > p {
 .joinContainer {
   background-color: var(--clr-redBase);
   display: block;
-  margin: 1em;
 }
 
 .joinButtonContainer {
@@ -395,12 +395,6 @@ footer > p {
 .donateContainer {
   background-color: var(--clr-greenBase);
   display: block;
-  margin: 1em;
-}
-
-.donateButtonContainer {
-  display: flex;
-  justify-content: center;
 }
 
 .donateButton {
@@ -408,8 +402,15 @@ footer > p {
   padding: 1.5em;
 }
 
-.donateButton:hover {
-  box-shadow: inset 10em -10em var(--clr-greenDark);
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#Button:focus + #form {
+  display: block;
 }
 
 /*--------------------- Page de news ---------------------*/
@@ -439,7 +440,6 @@ footer > p {
 .newsContainer {
   background-color: var(--clr-blackBase);
   display: block;
-  margin: 1em;
 }
 
 .newsButtonContainer {
