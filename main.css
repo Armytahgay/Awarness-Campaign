@@ -197,6 +197,11 @@ img {
   margin: auto;
 }
 
+.img {
+  width: 20em;
+  height: 20em;
+}
+
 #form {
   display: none;
 }
@@ -206,7 +211,11 @@ footer {
   margin-top: 1em;
 }
 
-
+.inlineContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
 .miniLogo {
   width: 2em;
